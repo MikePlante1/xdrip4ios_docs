@@ -9,7 +9,7 @@ ___
 
 An APS works by reading blood glucose values, predicting/calculating the insulin requirement and automatically adjusting a user's insulin pump with the aim of keeping the user within their target blood glucose range.
 
-[FreeAPS](https://www.loopandlearn.org/freeapsdoc/) is a fork of the [Loop](https://loopkit.github.io/loopdocs/) project. This fork was originally developed by **Ivan Valkou**. His repository was frozen last spring. To support the users of the FreeAPS fork, maintenance was taken over by the Loop and Learn mentors. Only minor maintenence will be performed, though, so users are highly encouraged to switch to the [main_lnl_patches](https://www.loopandlearn.org/github-lnl-patches/) branch of Loop 3 which also supports xDrip4iOS as an offline cgm source.
+[FreeAPS](https://www.loopandlearn.org/freeapsdoc/) is a fork of the [Loop](https://loopkit.github.io/loopdocs/) project. This fork was originally developed by **Ivan Valkou**. His repository was frozen in the spring of 2021. To support the users of the FreeAPS fork, maintenance was taken over by the Loop and Learn mentors. Only minor maintenence will be performed, though, so users are highly encouraged to switch to the [main_lnl_patches](https://www.loopandlearn.org/github-lnl-patches/) branch of Loop 3 which also supports xDrip4iOS as an offline cgm source.
 
 !!!info "FreeAPS vs FreeAPS X??"
     This could get confusing, so pay attention:
