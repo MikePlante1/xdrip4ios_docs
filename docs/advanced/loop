@@ -1,0 +1,47 @@
+# Loop Integration
+
+Loop has the ability to eavesdrop on Dexcom transmissions, so you just need to [enter your Transmitter ID into Loop](https://loopkit.github.io/loopdocs/loop-3/add-cgm/#add-cgm).
+
+For Loop to use [certain Libre](../index.md#compatible-sensors)) as a cgm, however, you need to install a [plugin](https://github.com/JohanDegraeve/xdrip-client-swift-1#readme) into Loop 3 to allow it to use xDrip4iOS as a data source. You can also install the [main_lnl_patches](https://github.com/loopnlearn/LoopWorkspace/tree/main_lnl_patches) branch of Loop 3 maintained by [Loop and Learn](https://www.loopandlearn.org) which has this plugin already installed in it.
+
+___
+## What is Loop?
+
+**Loop** is an **Artificial Pancreas System** (APS) written for the iPhone.
+
+An APS works by reading blood glucose values, predicting/calculating the insulin requirement and automatically adjusting a user's insulin pump with the aim of keeping the user within their target blood glucose range.
+
+___
+## How do I install Loop?
+
+You need to build Loop yourself using the directions at [LoopDocs.org](https://loopkit.github.io/loopdocs/). There are two methods for building Loop, both of which are available at LoopDocs. Many 
+
+Remember that xDrip4iOS is a separate app and must be [built from source](../install/build.md) in order to successfully interface with FreeAPS.
+
+___
+### Sign the Targets
+
+As per a normal Loop build, you will need to sign the four targets using your Development Team.
+
+Signing will automatically set the Bundle Identifier for your app. You can change this, but be aware that it will then install a completely new FreeAPS app. It's better to just leave it as is.
+___
+### App Group
+
+Please do not modify the App Groups at all. This is important to ensure integration with xDrip4iOS.
+
+___
+## How do I install xDrip4iOS?
+
+You need to follow the [Build From Source](../install/build.md) instructions.
+
+
+The common LoopKit app group is already written into the standard project file in xDrip4iOS so no need to touch anything.
+
+___
+## Operation
+
+The operation of both FreeAPS (Loop) and xDrip4iOS is the same. The only thing needed is to add a CGM in FreeAPS and chose "xDrip4iOS".
+
+This will tell FreeAPS to look for glucose data in the shared app group via Julien's xdrip client.
+
+</br>
